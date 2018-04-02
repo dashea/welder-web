@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ComponentTypeIcons from '../../components/ListView/ComponentTypeIcons';
+import { _ } from '../../core/i18n';
 
 class ComponentSummaryList extends React.Component {
   constructor() {
@@ -21,7 +22,7 @@ class ComponentSummaryList extends React.Component {
     return (
       <div className="cmpsr-summary-listview">
         <p>
-          <strong>Dependencies</strong>
+          <strong>{_("Dependencies")}</strong>
           <span className="badge">{this.props.listItems.length}</span>
           <a href="#" className="pull-right" onClick={e => this.handleShowAll(e)}>
             {`${this.state.showAll ? 'Show Less' : 'Show All'}`}

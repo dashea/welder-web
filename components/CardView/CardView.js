@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { _ } from '../../core/i18n';
 
 class CardView extends React.Component {
   componentDidMount() {
@@ -49,7 +50,7 @@ class CardView extends React.Component {
                   </div>
                 </div>
                 <p className="card-pf-info text-center">
-                  <strong>Created On</strong> 2015-03-01 02:00 AM <br /> Never Expires
+                  <strong>{_("Created On")}</strong> 2015-03-01 02:00 AM <br /> {_("Never Expires")}
                 </p>
               </div>
               <div className="card-pf-view-checkbox">

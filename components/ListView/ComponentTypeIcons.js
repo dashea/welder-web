@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { _ } from '../../core/i18n';
 
 const ComponentTypeIcons = props => {
   let icon = '';
@@ -8,15 +9,15 @@ const ComponentTypeIcons = props => {
   const context = props.compDetails ? 'pf-icon-small' : 'list-pf-icon list-pf-icon-small';
   switch (props.componentType) {
     case 'Module':
-      type = 'Type&nbsp;<strong>Module</strong>';
+      type = `${_('Type')}&nbsp;<strong>${_('Module')}</strong>`;
       icon = 'pficon pficon-bundle';
       break;
     case 'RPM':
-      type = 'Type&nbsp;<strong>RPM</strong>';
+      type = `${_('Type')}&nbsp;<strong>${_('RPM')}</strong>`;
       icon = 'pficon pficon-bundle';
       break;
     default:
-      type = 'Type&nbsp;<strong>RPM</strong>';
+      type = `${_('Type')}&nbsp;<strong>${_('RPM')}</strong>`;
       icon = 'pficon pficon-bundle';
   }
   if (props.componentInBlueprint === true) {

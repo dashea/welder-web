@@ -7,6 +7,7 @@ import history from '../../core/history';
 // without these imports the entire app will produce an error when loaded
 import PfBreakpoints from './PfBreakpoints';
 import PfVerticalNavigation from './PfVerticalNavigation';
+import { _ } from "../../core/i18n";
 
 class Navigation extends React.Component {
 
@@ -29,11 +30,11 @@ class Navigation extends React.Component {
               <span
                 className="fa fa-shield"
                 data-toggle="tooltip"
-                title="Blueprints"
+                title={_("Blueprints")}
                 onClick={(e) => this.handleNavClick(e)}
               >
               </span>
-              <span className="list-group-item-value">Blueprints</span>
+              <span className="list-group-item-value">{_("Blueprints")}</span>
             </Link>
           </li>
         </ul>

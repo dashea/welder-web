@@ -1,4 +1,5 @@
 import React from 'react';
+import { _ } from '../../core/i18n';
 
 function Header() {
   return (
@@ -15,7 +16,7 @@ function Header() {
               className="nav-item-iconic"
               id="notifications"
             >
-              <span className="fa fa-bell-o" title="No new notifications"></span>
+              <span className="fa fa-bell-o" title={_('No new notifications')}></span>
             </a>
           </li>
           <li className="dropdown">
@@ -30,8 +31,8 @@ function Header() {
               <span className="caret"></span>
             </a>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a >Help</a></li>
-              <li><a >About</a></li>
+              <li><a >{_("Help")}</a></li>
+              <li><a >{_("About")}</a></li>
             </ul>
           </li>
           <li className="dropdown">
@@ -46,8 +47,8 @@ function Header() {
               <span className="caret"></span>
             </a>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <li><a >Preferences</a></li>
-              <li><a >Logout</a></li>
+              <li><a >{_("Preferences")}</a></li>
+              <li><a >{_("Logout")}</a></li>
             </ul>
           </li>
         </ul>

@@ -5,6 +5,7 @@ import Tab from '../../components/Tabs/Tab';
 import ListView from '../../components/ListView/ListView';
 import ListItemComponents from '../../components/ListView/ListItemComponents';
 import DependencyListView from '../../components/ListView/DependencyListView';
+import { _ } from '../../core/i18n';
 
 class BlueprintContents extends React.Component {
   constructor() {
@@ -35,7 +36,7 @@ class BlueprintContents extends React.Component {
           classnames="nav nav-tabs nav-tabs-pf"
         >
           <Tab
-            tabTitle={`Selected Components <span class="badge">${components.length}</span>`}
+            tabTitle={`${_("Selected Components")} <span class="badge">${components.length}</span>`}
             active={this.state.activeTab === 'Selected'}
           >
             <ListView className="cmpsr-blueprint__components" stacked>
@@ -52,7 +53,7 @@ class BlueprintContents extends React.Component {
             </ListView>
           </Tab>
           <Tab
-            tabTitle={`Dependencies <span class="badge">${dependencies.length}</span>`}
+            tabTitle={`${_("Dependencies")} <span class="badge">${dependencies.length}</span>`}
             active={this.state.activeTab === 'Dependencies'}
           >
             <DependencyListView

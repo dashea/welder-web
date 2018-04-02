@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '../../components/Link';
 import CreateImage from '../../components/Modal/CreateImage';
+import { _ } from '../../core/i18n';
 
 class BlueprintListView extends React.Component {
   constructor() {
@@ -76,13 +77,13 @@ class BlueprintListView extends React.Component {
               </div>
               <div className="list-view-pf-actions">
                 <Link to={`/edit/${blueprint.name}`}>
-                  <button className="btn btn-default" type="button">Edit Blueprint</button>
+                  <button className="btn btn-default" type="button">{_("Edit Blueprint")}</button>
                 </Link>
                 <button
                   className="btn btn-default"
                   onClick={() => this.handleCreateImage(blueprint.name)}
                 >
-                  Create Image
+                  {_("Create Image")}
                 </button>
                 <div className="dropdown pull-right dropdown-kebab-pf">
                   <button
@@ -97,8 +98,8 @@ class BlueprintListView extends React.Component {
                     className="dropdown-menu dropdown-menu-right"
                     aria-labelledby="dropdownKebabRight9"
                   >
-                    <li><a href="#" onClick={(e) => this.props.handleShowModalExport(e, blueprint.name)}>Export</a></li>
-                    <li><a href="#" onClick={(e) => this.props.handleShowModalDelete(e, blueprint)}>Delete</a></li>
+                    <li><a href="#" onClick={(e) => this.props.handleShowModalExport(e, blueprint.name)}>{_("Export")}</a></li>
+                    <li><a href="#" onClick={(e) => this.props.handleShowModalDelete(e, blueprint)}>{_("Delete")}</a></li>
                   </ul>
                 </div>
               </div>
@@ -117,16 +118,16 @@ class BlueprintListView extends React.Component {
                     <div
                       className="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked hidden"
                     >
-                      Test<strong>2</strong></div>
+                      {_("Test")}<strong>2</strong></div>
                     <div
                       className="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked hidden"
                     >
-                      Development<strong>0</strong>
+                      {_("Development")}<strong>0</strong>
                     </div>
                     <div
                       className="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked hidden"
                     >
-                      Production<strong>1</strong>
+                      {_("Production")}<strong>1</strong>
                     </div>
                   </div>
                 </div>
@@ -146,8 +147,8 @@ class BlueprintListView extends React.Component {
                         <input type="checkbox" />
                       </div>
                       <div className="list-view-pf-actions">
-                        <button className="btn btn-default">View Blueprint</button>
-                        <button className="btn btn-default">Download</button>
+                        <button className="btn btn-default">{_("View Blueprint")}</button>
+                        <button className="btn btn-default">{_("Download")}</button>
                         <div className="dropdown pull-right dropdown-kebab-pf">
                           <button
                             className="btn btn-link dropdown-toggle"
@@ -163,11 +164,11 @@ class BlueprintListView extends React.Component {
                             className="dropdown-menu dropdown-menu-right"
                             aria-labelledby="dropdownKebabRight12"
                           >
-                            <li><a >Action</a></li>
-                            <li><a >Another action</a></li>
-                            <li><a >Something else here</a></li>
+                            <li><a >{_("Action")}</a></li>
+                            <li><a >{_("Another action")}</a></li>
+                            <li><a >{_("Something else here")}</a></li>
                             <li role="separator" className="divider"></li>
-                            <li><a >Separated link</a></li>
+                            <li><a >{_("Separated link")}</a></li>
                           </ul>
                         </div>
                       </div>
@@ -178,10 +179,10 @@ class BlueprintListView extends React.Component {
                         <div className="list-view-pf-body">
                           <div className="list-view-pf-description">
                             <div className="list-group-item-heading">
-                              Image 1
+                              {_("Image 1")}
                             </div>
                             <div className="list-group-item-text">
-                              Created from Version 1
+                              {_("Created from Version 1")}
                             </div>
                           </div>
                         </div>

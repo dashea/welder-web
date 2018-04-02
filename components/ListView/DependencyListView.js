@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ListView from '../../components/ListView/ListView';
 import ListItemComponents from '../../components/ListView/ListItemComponents';
+import { _ } from '../../core/i18n';
 
 class DependencyListView extends React.Component {
   componentWillMount() {}
@@ -11,9 +12,9 @@ class DependencyListView extends React.Component {
       <div>
         <div className="alert alert-warning alert-dismissable hidden">
           <span className="pficon pficon-warning-triangle-o" />
-          One or more dependencies have multiple variations that could be used.
-          A default variation was automatically selected.
-          Click a flagged dependency to see other options available.
+          {_('One or more dependencies have multiple variations that could be used. ' +
+             'A default variation was automatically selected. ' +
+             'Click a flagged dependency to see other options available.')}
         </div>
         <ListView className={this.props.className} stacked>
           {this.props.listItems.map((listItem, i) => (

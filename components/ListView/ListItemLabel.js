@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { _ } from '../../core/i18n';
 
 const ListItemLabel = (props) => {
   let dependency = null;
@@ -7,7 +8,7 @@ const ListItemLabel = (props) => {
     dependency = (<div
       className="list-view-pf-additional-info-item list-view-pf-additional-info-item-stacked"
     >
-      <span className="label label-default">Dependency</span>
+      <span className="label label-default">{_("Dependency")}</span>
     </div>);
   }
 

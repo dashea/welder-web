@@ -24,6 +24,7 @@ import {
   componentsSortSetKey, componentsSortSetValue, dependenciesSortSetKey, dependenciesSortSetValue,
 } from '../../core/actions/sort';
 import { makeGetBlueprintById, makeGetSortedSelectedComponents, makeGetSortedDependencies } from '../../core/selectors';
+import { _ } from '../../core/i18n';
 
 class BlueprintPage extends React.Component {
   constructor() {
@@ -270,7 +271,7 @@ class BlueprintPage extends React.Component {
               </div>
             </div>
           </Tab>
-          <Tab tabTitle="Selected Components" active={activeTab === 'SelectedComponents'}>
+          <Tab tabTitle={_("Selected Components")} active={activeTab === 'SelectedComponents'}>
             <div className="row">
               {(activeComponent === '' &&
                 <div className="col-sm-12">

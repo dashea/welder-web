@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ComponentTypeIcons from '../../components/ListView/ComponentTypeIcons';
+import { _ } from '../../core/i18n';
 
 class ComponentInputs extends React.Component {
   componentDidMount() {
@@ -94,7 +95,7 @@ class ComponentInputs extends React.Component {
               data-trigger="manual"
               data-placement="top"
               title=""
-              data-original-title={component.active ? 'Hide Details' : 'Show Details and More Options'}
+              data-original-title={component.active ? _('Hide Details') : _('Show Details and More Options')}
               onClick={e => this.props.handleComponentDetails(e, component)}
             >
               <div className="list-pf-content list-pf-content-flex ">
@@ -117,7 +118,7 @@ class ComponentInputs extends React.Component {
                       data-html="true"
                       data-placement="top"
                       title=""
-                      data-original-title="Remove Component from Blueprint"
+                      data-original-title={_("Remove Component from Blueprint")}
                       onClick={e => this.props.handleRemoveComponent(e, component)}
                     >
                       <span className="fa fa-minus" />
@@ -130,9 +131,9 @@ class ComponentInputs extends React.Component {
                       data-html="true"
                       data-placement="top"
                       title=""
-                      data-original-title={`Add Component<br />
-                            Version&nbsp;<strong>${component.version}</strong>
-                            Release&nbsp;<strong>${component.release}</strong>`}
+                      data-original-title={`${_("Add Component")}<br />
+                            ${_("Version")}&nbsp;<strong>${component.version}</strong>
+                            ${_("Release")}&nbsp;<strong>${component.release}</strong>`}
                       onClick={e => this.props.handleAddComponent(e, 'input', component)}
                     >
                       <span className="fa fa-plus" />

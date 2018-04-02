@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NotificationsApi from '../../data/NotificationsApi';
+import { _ } from '../../core/i18n';
 
 class Notification extends React.PureComponent {
   constructor() {
@@ -114,7 +115,7 @@ class Notification extends React.PureComponent {
               )}
               <li>
                 <a href="#" onClick={(e) => this.handleClose(e, this.props.id)}>
-                  Close
+                  {_("Close")}
                 </a>
               </li>
             </ul>
