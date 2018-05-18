@@ -68,6 +68,7 @@
     "jest": "^20.0.4",
     "json-loader": "^0.5.4",
     "markdown-it": "^7.0.0",
+    "mkdirp": "^0.5.1",
     "path-to-regexp": "^1.5.3",
     "pixrem": "^3.0.1",
     "pleeease-filters": "^3.0.0",
@@ -169,7 +170,7 @@
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "test:cov": "npm test -- --coverage",
-    "translations:pull": "zanata-js project pull -v --po-dir build/po --pot-dir build/po && rip po2json 'build/po/*.po' -m 'build/messages/**/*.json' -o build/translations.json -c id",
+    "translations:pull": "mkdirp build/po && zanata-js project pull -v --po-dir build/po --pot-dir build/po && rip po2json 'build/po/*.po' -m 'build/messages/**/*.json' -o build/translations.json -c id",
     "translations:push": "rip json2pot 'build/messages/**/*.json' -o build/po/welder-web.pot -c id && zanata-js project push -v --pot-dir build/po"
   }
 }
